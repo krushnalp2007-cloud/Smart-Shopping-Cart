@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SmartTrolley - Smarter shopping, faster checkout.">
+    <title>SmartTrolley | Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <section class="brand-section">
+
+            <div class="brand-content">
+
+                <div class="logo">
+                    <span class="cart-icon">🛒</span>
+                </div>
+
+                <h1>
+                    Smart<span>Trolley</span>
+                </h1>
+
+                <p class="brand-tagline">
+                    Smarter shopping.<br>
+                    Faster checkout.
+                </p>
+
+                <p class="brand-quote">
+                    “A smarter way to shop, designed around you.”
+                </p>
+
+                <div class="features">
+
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+
+                        <div class="feature-text">
+                            <h3>Scan & Shop</h3>
+                            <p>Scan products directly from your trolley.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">⚖️</div>
+
+                        <div class="feature-text">
+                            <h3>Smart Verification</h3>
+                            <p>Weight sensors verify every product.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">⚡</div>
+
+                        <div class="feature-text">
+                            <h3>Quick Checkout</h3>
+                            <p>Skip long billing queues.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="brand-footer">
+                    <span class="status-dot"></span>
+                    Smart shopping technology
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <div class="login-header">
+
+                    <p class="welcome">
+                        Welcome back
+                    </p>
+
+                    <h2>
+                        Sign in to SmartTrolley
+                    </h2>
+
+                    <p class="login-description">
+                        Enter your details to continue.
+                    </p>
+
+                </div>
+
+                <div class="user-type">
+
+                    <button
+                        type="button"
+                        class="user-option active"
+                        id="customerBtn"
+                        onclick="selectUser('customer')"
+                    >
+                        <span class="option-icon">👤</span>
+                        <span>Customer</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="user-option"
+                        id="ownerBtn"
+                        onclick="selectUser('owner')"
+                    >
+                        <span class="option-icon">🏢</span>
+                        <span>Owner</span>
+                    </button>
+
+                </div>
+
+                <form id="loginForm" onsubmit="handleLogin(event)">
+
+                    <div class="input-group">
+
+                        <label for="mobile">
+                            Mobile Number
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="country-code">
+                                +91
+                            </span>
+
+                            <span class="input-divider"></span>
+
+                            <input
+                                type="tel"
+                                id="mobile"
+                                placeholder="Enter 10-digit mobile number"
+                                maxlength="10"
+                                inputmode="numeric"
+                                autocomplete="tel"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <div class="password-label">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a href="#" onclick="forgotPassword(event)">
+                                Forgot?
+                            </a>
+
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                onclick="togglePassword()"
+                                aria-label="Show password"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="remember-row">
+
+                        <label class="remember-label">
+
+                            <input
+                                type="checkbox"
+                                id="remember"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                        id="loginButton"
+                    >
+                        <span>Sign In</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                </form>
+
+                <div class="security">
+
+                    <span class="security-icon">
+                        🔐
+                    </span>
+
+                    <div>
+                        <strong>
+                            Secure access
+                        </strong>
+
+                        <span>
+                            Your information is protected.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="login-footer">
+                SmartTrolley makes shopping
+                <span>simple & smart.</span>
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
