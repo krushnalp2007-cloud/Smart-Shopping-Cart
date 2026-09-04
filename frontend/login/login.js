@@ -1,23 +1,8 @@
-/* =====================================================
-   SMARTTROLLEY LOGIN
-===================================================== */
-
-
-/* =====================================================
-   CURRENT USER TYPE
-===================================================== */
-
 let selectedUser = "customer";
-
-
-/* =====================================================
-   SELECT CUSTOMER / OWNER
-===================================================== */
 
 function selectUser(type) {
 
     selectedUser = type;
-
 
     const customerBtn =
         document.getElementById("customerBtn");
@@ -25,27 +10,18 @@ function selectUser(type) {
     const ownerBtn =
         document.getElementById("ownerBtn");
 
-
     if (type === "customer") {
 
         customerBtn.classList.add("active");
-
         ownerBtn.classList.remove("active");
 
     } else {
 
         ownerBtn.classList.add("active");
-
         customerBtn.classList.remove("active");
 
     }
-
 }
-
-
-/* =====================================================
-   PASSWORD VISIBILITY
-===================================================== */
 
 function togglePassword() {
 
@@ -54,7 +30,6 @@ function togglePassword() {
 
     const passwordButton =
         document.querySelector(".show-password");
-
 
     if (passwordInput.type === "password") {
 
@@ -77,40 +52,21 @@ function togglePassword() {
             "aria-label",
             "Show password"
         );
-
     }
-
 }
-
-
-/* =====================================================
-   FORGOT PASSWORD
-===================================================== */
 
 function forgotPassword(event) {
 
     event.preventDefault();
 
-
     alert(
         "Password recovery will be connected to the backend later."
     );
-
 }
-
-
-/* =====================================================
-   LOGIN
-===================================================== */
 
 function handleLogin(event) {
 
     event.preventDefault();
-
-
-    /* ---------------------------------------------
-       Get values
-    --------------------------------------------- */
 
     const mobileInput =
         document.getElementById("mobile");
@@ -121,17 +77,11 @@ function handleLogin(event) {
     const loginButton =
         document.getElementById("loginButton");
 
-
     const mobile =
         mobileInput.value.trim();
 
     const password =
         passwordInput.value;
-
-
-    /* ---------------------------------------------
-       Validate mobile number
-    --------------------------------------------- */
 
     if (!/^[0-9]{10}$/.test(mobile)) {
 
@@ -144,11 +94,6 @@ function handleLogin(event) {
         return;
     }
 
-
-    /* ---------------------------------------------
-       Validate password
-    --------------------------------------------- */
-
     if (password.length < 4) {
 
         alert(
@@ -160,68 +105,33 @@ function handleLogin(event) {
         return;
     }
 
-
-    /* ---------------------------------------------
-       Save login information
-       
-       TEMPORARY PROTOTYPE ONLY
-       
-       Later this will be handled by:
-       
-       Frontend
-           ↓
-       Backend API
-           ↓
-       Database
-           ↓
-       Authentication
-    --------------------------------------------- */
-
     localStorage.setItem(
         "loggedIn",
         "true"
     );
-
 
     localStorage.setItem(
         "userType",
         selectedUser
     );
 
-
     localStorage.setItem(
         "mobile",
         mobile
     );
 
-
-    /* ---------------------------------------------
-       Remember me
-    --------------------------------------------- */
-
     const remember =
         document.getElementById("remember").checked;
-
 
     localStorage.setItem(
         "rememberMe",
         remember
     );
 
-
-    /* ---------------------------------------------
-       Button animation
-    --------------------------------------------- */
-
     loginButton.classList.add("loading");
 
     loginButton.querySelector("span:first-child")
         .textContent = "Signing in...";
-
-
-    /* ---------------------------------------------
-       Temporary redirect
-    --------------------------------------------- */
 
     setTimeout(() => {
 
@@ -238,5 +148,4 @@ function handleLogin(event) {
         }
 
     }, 600);
-
 }

@@ -2,182 +2,81 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="SmartTrolley - Smarter shopping, faster checkout."
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SmartTrolley - Smarter shopping, faster checkout.">
     <title>SmartTrolley | Login</title>
-
     <link rel="stylesheet" href="login.css">
-
 </head>
-
 
 <body>
 
-
-    <!-- =========================================
-         MAIN LOGIN PAGE
-    ========================================== -->
-
     <main class="login-page">
-
-
-        <!-- =====================================
-             LEFT BRAND SECTION
-        ====================================== -->
 
         <section class="brand-section">
 
-
             <div class="brand-content">
 
-
-                <!-- Logo -->
-
                 <div class="logo">
-
                     <span class="cart-icon">🛒</span>
-
                 </div>
-
-
-                <!-- Brand -->
 
                 <h1>
                     Smart<span>Trolley</span>
                 </h1>
-
 
                 <p class="brand-tagline">
                     Smarter shopping.<br>
                     Faster checkout.
                 </p>
 
-
-                <!-- Quote -->
-
                 <p class="brand-quote">
                     “A smarter way to shop, designed around you.”
                 </p>
 
-
-                <!-- =================================
-                     FEATURES
-                ================================== -->
-
                 <div class="features">
 
-
-                    <!-- Feature 1 -->
-
                     <div class="feature">
-
-                        <div class="feature-icon">
-                            📱
-                        </div>
+                        <div class="feature-icon">📱</div>
 
                         <div class="feature-text">
-
-                            <h3>
-                                Scan & Shop
-                            </h3>
-
-                            <p>
-                                Scan products directly from your trolley.
-                            </p>
-
+                            <h3>Scan & Shop</h3>
+                            <p>Scan products directly from your trolley.</p>
                         </div>
-
                     </div>
-
-
-                    <!-- Feature 2 -->
 
                     <div class="feature">
-
-                        <div class="feature-icon">
-                            ⚖️
-                        </div>
+                        <div class="feature-icon">⚖️</div>
 
                         <div class="feature-text">
-
-                            <h3>
-                                Smart Verification
-                            </h3>
-
-                            <p>
-                                Weight sensors verify every product.
-                            </p>
-
+                            <h3>Smart Verification</h3>
+                            <p>Weight sensors verify every product.</p>
                         </div>
-
                     </div>
-
-
-                    <!-- Feature 3 -->
 
                     <div class="feature">
-
-                        <div class="feature-icon">
-                            ⚡
-                        </div>
+                        <div class="feature-icon">⚡</div>
 
                         <div class="feature-text">
-
-                            <h3>
-                                Quick Checkout
-                            </h3>
-
-                            <p>
-                                Skip long billing queues.
-                            </p>
-
+                            <h3>Quick Checkout</h3>
+                            <p>Skip long billing queues.</p>
                         </div>
-
                     </div>
-
 
                 </div>
-
-
-                <!-- Small bottom message -->
 
                 <div class="brand-footer">
-
                     <span class="status-dot"></span>
-
                     Smart shopping technology
-
                 </div>
-
 
             </div>
 
         </section>
 
-
-
-        <!-- =====================================
-             RIGHT LOGIN SECTION
-        ====================================== -->
-
         <section class="login-section">
 
-
             <div class="login-card">
-
-
-                <!-- Header -->
 
                 <div class="login-header">
 
@@ -195,14 +94,7 @@
 
                 </div>
 
-
-
-                <!-- =================================
-                     USER TYPE
-                ================================== -->
-
                 <div class="user-type">
-
 
                     <button
                         type="button"
@@ -210,17 +102,9 @@
                         id="customerBtn"
                         onclick="selectUser('customer')"
                     >
-
-                        <span class="option-icon">
-                            👤
-                        </span>
-
-                        <span>
-                            Customer
-                        </span>
-
+                        <span class="option-icon">👤</span>
+                        <span>Customer</span>
                     </button>
-
 
                     <button
                         type="button"
@@ -228,52 +112,27 @@
                         id="ownerBtn"
                         onclick="selectUser('owner')"
                     >
-
-                        <span class="option-icon">
-                            🏢
-                        </span>
-
-                        <span>
-                            Owner
-                        </span>
-
+                        <span class="option-icon">🏢</span>
+                        <span>Owner</span>
                     </button>
-
 
                 </div>
 
-
-
-                <!-- =================================
-                     LOGIN FORM
-                ================================== -->
-
-                <form
-                    id="loginForm"
-                    onsubmit="handleLogin(event)"
-                >
-
-
-                    <!-- Mobile Number -->
+                <form id="loginForm" onsubmit="handleLogin(event)">
 
                     <div class="input-group">
-
 
                         <label for="mobile">
                             Mobile Number
                         </label>
 
-
                         <div class="input-wrapper">
-
 
                             <span class="country-code">
                                 +91
                             </span>
 
-
                             <span class="input-divider"></span>
-
 
                             <input
                                 type="tel"
@@ -285,42 +144,29 @@
                                 required
                             >
 
-
                         </div>
-
 
                     </div>
 
-
-
-                    <!-- Password -->
-
                     <div class="input-group">
 
-
                         <div class="password-label">
-
 
                             <label for="password">
                                 Password
                             </label>
 
-
                             <a href="#" onclick="forgotPassword(event)">
                                 Forgot?
                             </a>
 
-
                         </div>
 
-
                         <div class="input-wrapper">
-
 
                             <span class="input-icon">
                                 🔒
                             </span>
-
 
                             <input
                                 type="password"
@@ -329,7 +175,6 @@
                                 autocomplete="current-password"
                                 required
                             >
-
 
                             <button
                                 type="button"
@@ -340,18 +185,11 @@
                                 👁
                             </button>
 
-
                         </div>
-
 
                     </div>
 
-
-
-                    <!-- Remember -->
-
                     <div class="remember-row">
-
 
                         <label class="remember-label">
 
@@ -366,48 +204,26 @@
 
                         </label>
 
-
                     </div>
-
-
-
-                    <!-- Login Button -->
 
                     <button
                         type="submit"
                         class="login-button"
                         id="loginButton"
                     >
-
-                        <span>
-                            Sign In
-                        </span>
-
-                        <span class="arrow">
-                            →
-                        </span>
-
+                        <span>Sign In</span>
+                        <span class="arrow">→</span>
                     </button>
-
 
                 </form>
 
-
-
-                <!-- =================================
-                     SECURITY MESSAGE
-                ================================== -->
-
                 <div class="security">
-
 
                     <span class="security-icon">
                         🔐
                     </span>
 
-
                     <div>
-
                         <strong>
                             Secure access
                         </strong>
@@ -415,33 +231,20 @@
                         <span>
                             Your information is protected.
                         </span>
-
                     </div>
-
 
                 </div>
 
-
             </div>
 
-
-
-            <!-- Owner information -->
-
             <p class="login-footer">
-
                 SmartTrolley makes shopping
                 <span>simple & smart.</span>
-
             </p>
-
 
         </section>
 
-
     </main>
-
-
 
     <script src="login.js"></script>
 
