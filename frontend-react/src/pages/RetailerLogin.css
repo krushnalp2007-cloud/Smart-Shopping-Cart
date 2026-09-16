@@ -1,0 +1,125 @@
+.retailer-login-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.retailer-login-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 36px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.retailer-login-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: #ede9fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.retailer-login-card h1 {
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: 30px;
+}
+
+.retailer-login-subtitle {
+  margin: 0 0 28px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.retailer-form-group {
+  margin-bottom: 17px;
+}
+
+.retailer-form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.retailer-form-group input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  outline: none;
+}
+
+.retailer-form-group input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.retailer-login-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  padding: 11px 12px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.retailer-login-button {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  background: #7c3aed;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.retailer-login-button:hover {
+  background: #6d28d9;
+}
+
+.retailer-back-button {
+  width: 100%;
+  margin-top: 14px;
+  border: none;
+  background: transparent;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.retailer-back-button:hover {
+  color: #7c3aed;
+}
+
+@media (max-width: 520px) {
+  .retailer-login-page {
+    padding: 15px;
+  }
+
+  .retailer-login-card {
+    padding: 25px 20px;
+  }
+
+  .retailer-login-card h1 {
+    font-size: 25px;
+  }
+}

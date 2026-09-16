@@ -1,0 +1,333 @@
+.scanner-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.scanner-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e9ef;
+}
+
+.scanner-header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.scanner-header p {
+  margin: 5px 0 0;
+  color: #697386;
+}
+
+.back-button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dfe3ea;
+  background: #ffffff;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.scanner-content {
+  width: min(900px, calc(100% - 32px));
+  margin: 30px auto;
+}
+
+.camera-card,
+.product-card,
+.verification-info {
+  background: #ffffff;
+  border: 1px solid #e3e7ee;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(30, 40, 60, 0.05);
+}
+
+.camera-area {
+  min-height: 380px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #111827;
+}
+
+.camera-placeholder {
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.camera-icon {
+  font-size: 58px;
+  margin-bottom: 10px;
+}
+
+.camera-placeholder h2 {
+  margin: 5px 0;
+}
+
+.camera-placeholder p {
+  max-width: 450px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.camera-active {
+  min-height: 380px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.camera-top-label {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #cbd5e1;
+}
+
+.scan-frame {
+  width: 270px;
+  height: 170px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.corner {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+.top-left {
+  top: -2px;
+  left: -2px;
+  border-width: 3px 0 0 3px;
+}
+
+.top-right {
+  top: -2px;
+  right: -2px;
+  border-width: 3px 3px 0 0;
+}
+
+.bottom-left {
+  bottom: -2px;
+  left: -2px;
+  border-width: 0 0 3px 3px;
+}
+
+.bottom-right {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 3px 3px 0;
+}
+
+.scan-line {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 50%;
+  height: 2px;
+  background: #ffffff;
+  opacity: 0.9;
+}
+
+.camera-status {
+  margin-top: 28px;
+  color: #d1d5db;
+}
+
+.scanner-controls {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scanner-controls label {
+  font-weight: 600;
+}
+
+.scanner-controls input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d7dce5;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.primary-button,
+.continue-button {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: #172033;
+  color: #ffffff;
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.continue-button {
+  width: 100%;
+  margin-top: 20px;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.demo-hint {
+  margin: 0;
+  font-size: 13px;
+  color: #7b8494;
+}
+
+.error-box {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #9f1239;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 20px;
+}
+
+.error-box p {
+  margin: 5px 0 0;
+}
+
+.product-card h2 {
+  margin: 12px 0 20px;
+  font-size: 25px;
+}
+
+.success-badge {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #ecfdf3;
+  color: #047857;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.product-details {
+  border-top: 1px solid #edf0f4;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.detail-row span {
+  color: #697386;
+}
+
+.pending-message {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.pending-message strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pending-message p {
+  margin: 0;
+  color: #697386;
+  line-height: 1.5;
+}
+
+.verification-info h3 {
+  margin-top: 0;
+}
+
+.verification-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.verification-steps div {
+  text-align: center;
+  padding: 14px 8px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.verification-steps span {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #172033;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.verification-steps p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #5f6878;
+}
+
+@media (max-width: 700px) {
+  .scanner-header {
+    padding: 18px;
+  }
+
+  .scanner-content {
+    width: min(100% - 20px, 900px);
+    margin: 20px auto;
+  }
+
+  .camera-card,
+  .product-card,
+  .verification-info {
+    padding: 16px;
+  }
+
+  .verification-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

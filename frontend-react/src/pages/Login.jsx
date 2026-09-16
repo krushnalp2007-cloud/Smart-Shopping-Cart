@@ -1,380 +1,147 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const [role, setRole] = useState("customer");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false);
-    const [error, setError] = useState("");
+  return (
+    <div className="login-page">
 
-    const handleLogin = (event) => {
-        event.preventDefault();
-        setError("");
+      <div className="login-background-shape login-shape-one"></div>
+      <div className="login-background-shape login-shape-two"></div>
 
-        // Temporary frontend validation.
-        // Real authentication will be connected later.
-        if (!email.trim() || !password.trim()) {
-            setError("Please enter your email and password.");
-            return;
-        }
+      <main className="login-container">
 
-        if (!email.includes("@")) {
-            setError("Please enter a valid email address.");
-            return;
-        }
+        <section className="login-brand-section">
 
-        if (password.length < 4) {
-            setError("Password must contain at least 4 characters.");
-            return;
-        }
+          <div className="brand-badge">
+            <span>🛒</span>
+            SmartCart
+          </div>
 
-        localStorage.setItem("smartCartRole", role);
-        localStorage.setItem("smartCartUser", email);
+          <h1>
+            Smarter shopping.
+            <br />
+            <span>Faster checkout.</span>
+          </h1>
 
-        if (role === "customer") {
-            navigate("/customer");
-        } else {
-            navigate("/retailer");
-        }
-    };
+          <p>
+            A smart shopping experience with automated
+            product verification and seamless checkout.
+          </p>
 
-    return (
-        <main className="login-page">
+          <div className="feature-row">
+            <div className="feature-item">
+              <span>▣</span>
+              <p>Smart Scanning</p>
+            </div>
 
-            {/* ================= LEFT SIDE ================= */}
+            <div className="feature-item">
+              <span>✓</span>
+              <p>Product Verification</p>
+            </div>
 
-            <section className="login-brand-panel">
+            <div className="feature-item">
+              <span>₹</span>
+              <p>Easy Checkout</p>
+            </div>
+          </div>
 
-                <div className="brand">
+        </section>
 
-                    <div className="brand-icon">
-                        🛒
-                    </div>
+        <section className="login-card">
 
-                    <div>
-                        <h2>
-                            Smart<span>Cart</span>
-                        </h2>
+          <div className="login-card-header">
 
-                        <p>
-                            Smart Shopping System
-                        </p>
-                    </div>
+            <div className="login-icon">
+              🛒
+            </div>
 
-                </div>
+            <div>
+              <p className="welcome-label">
+                WELCOME TO SMARTCART
+              </p>
 
+              <h2>Choose your account</h2>
+            </div>
 
-                <div className="brand-message">
+          </div>
 
-                    <p className="brand-label">
-                        SMART SHOPPING, SIMPLIFIED
-                    </p>
+          <p className="login-description">
+            Select how you want to continue.
+          </p>
 
-                    <h1>
-                        Shop smarter.
-                        <br />
-                        Pay faster.
-                    </h1>
+          <div className="role-options">
 
-                    <p className="brand-description">
-                        Scan products, verify every item,
-                        track your spending and complete
-                        checkout directly from your smart cart.
-                    </p>
+            <button
+              className="role-card customer-role"
+              onClick={() => navigate("/customer-login")}
+            >
 
-                </div>
+              <div className="role-icon">
+                👤
+              </div>
 
+              <div className="role-text">
+                <span className="role-title">
+                  Customer
+                </span>
 
-                <div className="feature-list">
+                <span className="role-description">
+                  Scan products, verify your items and
+                  checkout quickly.
+                </span>
+              </div>
 
-                    <div className="feature-item">
-                        <span>✓</span>
-                        Smart barcode scanning
-                    </div>
+              <span className="role-arrow">
+                →
+              </span>
 
-                    <div className="feature-item">
-                        <span>✓</span>
-                        Automatic weight verification
-                    </div>
+            </button>
 
-                    <div className="feature-item">
-                        <span>✓</span>
-                        Fast digital checkout
-                    </div>
+            <button
+              className="role-card retailer-role"
+              onClick={() => navigate("/retailer-login")}
+            >
 
-                </div>
+              <div className="role-icon">
+                🏪
+              </div>
 
-            </section>
+              <div className="role-text">
+                <span className="role-title">
+                  Retailer
+                </span>
 
+                <span className="role-description">
+                  Manage products, inventory, sales and
+                  security alerts.
+                </span>
+              </div>
 
-            {/* ================= RIGHT SIDE ================= */}
+              <span className="role-arrow">
+                →
+              </span>
 
-            <section className="login-form-panel">
+            </button>
 
-                <div className="login-card">
+          </div>
 
-                    <div className="mobile-brand">
+          <div className="login-security">
+            <span>🔒</span>
+            Secure shopping experience
+          </div>
 
-                        <div className="brand-icon">
-                            🛒
-                        </div>
+        </section>
 
-                        <div>
-                            <h2>
-                                Smart<span>Cart</span>
-                            </h2>
+      </main>
 
-                            <p>
-                                Smart Shopping System
-                            </p>
-                        </div>
+      <footer className="login-footer">
+        SMART SHOPPING CART • COLLEGE PROJECT PROTOTYPE
+      </footer>
 
-                    </div>
-
-
-                    <div className="login-heading">
-
-                        <p className="heading-label">
-                            WELCOME
-                        </p>
-
-                        <h1>
-                            Sign in to SmartCart
-                        </h1>
-
-                        <p>
-                            Enter your details to continue.
-                        </p>
-
-                    </div>
-
-
-                    <form onSubmit={handleLogin}>
-
-                        {/* EMAIL */}
-
-                        <div className="field">
-
-                            <label htmlFor="email">
-                                Email address
-                            </label>
-
-                            <input
-                                id="email"
-                                type="email"
-                                value={email}
-                                onChange={(event) =>
-                                    setEmail(event.target.value)
-                                }
-                                placeholder="you@example.com"
-                                autoComplete="email"
-                            />
-
-                        </div>
-
-
-                        {/* PASSWORD */}
-
-                        <div className="field">
-
-                            <label htmlFor="password">
-                                Password
-                            </label>
-
-                            <div className="password-wrapper">
-
-                                <input
-                                    id="password"
-                                    type={
-                                        showPassword
-                                            ? "text"
-                                            : "password"
-                                    }
-                                    value={password}
-                                    onChange={(event) =>
-                                        setPassword(event.target.value)
-                                    }
-                                    placeholder="Enter your password"
-                                    autoComplete="current-password"
-                                />
-
-                                <button
-                                    type="button"
-                                    className="show-password"
-                                    onClick={() =>
-                                        setShowPassword(
-                                            (current) => !current
-                                        )
-                                    }
-                                >
-                                    {showPassword ? "Hide" : "Show"}
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                        {/* ROLE */}
-
-                        <div className="field">
-
-                            <label>
-                                Continue as
-                            </label>
-
-                            <div className="role-grid">
-
-                                <button
-                                    type="button"
-                                    className={`role-card ${
-                                        role === "customer"
-                                            ? "selected"
-                                            : ""
-                                    }`}
-                                    onClick={() =>
-                                        setRole("customer")
-                                    }
-                                >
-
-                                    <span className="role-icon">
-                                        👤
-                                    </span>
-
-                                    <span>
-                                        <strong>
-                                            Customer
-                                        </strong>
-
-                                        <small>
-                                            Shop & pay
-                                        </small>
-                                    </span>
-
-                                </button>
-
-
-                                <button
-                                    type="button"
-                                    className={`role-card ${
-                                        role === "retailer"
-                                            ? "selected"
-                                            : ""
-                                    }`}
-                                    onClick={() =>
-                                        setRole("retailer")
-                                    }
-                                >
-
-                                    <span className="role-icon">
-                                        🏪
-                                    </span>
-
-                                    <span>
-                                        <strong>
-                                            Retailer
-                                        </strong>
-
-                                        <small>
-                                            Manage store
-                                        </small>
-                                    </span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                        {/* REMEMBER + FORGOT */}
-
-                        <div className="form-options">
-
-                            <label className="remember-option">
-
-                                <input type="checkbox" />
-
-                                <span>
-                                    Remember me
-                                </span>
-
-                            </label>
-
-                            <button
-                                type="button"
-                                className="forgot-button"
-                            >
-                                Forgot password?
-                            </button>
-
-                        </div>
-
-
-                        {/* ERROR */}
-
-                        {error && (
-                            <div className="error-message">
-                                {error}
-                            </div>
-                        )}
-
-
-                        {/* LOGIN BUTTON */}
-
-                        <button
-                            type="submit"
-                            className="login-button"
-                        >
-
-                            <span>
-                                Sign In
-                            </span>
-
-                            <span className="login-arrow">
-                                →
-                            </span>
-
-                        </button>
-
-                    </form>
-
-
-                    <div className="divider">
-
-                        <span></span>
-
-                        <p>
-                            New to SmartCart?
-                        </p>
-
-                        <span></span>
-
-                    </div>
-
-
-                    <button
-                        type="button"
-                        className="create-account-button"
-                    >
-                        Create an account
-                    </button>
-
-
-                    <p className="security-text">
-                        🔒 Your information is securely protected.
-                    </p>
-
-                </div>
-
-            </section>
-
-        </main>
-    );
+    </div>
+  );
 }
 
 export default Login;
