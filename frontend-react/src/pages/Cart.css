@@ -1,0 +1,271 @@
+.cart-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e9ef;
+}
+
+.cart-header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.cart-header p {
+  margin: 5px 0 0;
+  color: #697386;
+}
+
+.back-button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dfe3ea;
+  background: #ffffff;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.cart-content {
+  width: min(1000px, calc(100% - 32px));
+  margin: 30px auto;
+}
+
+.cart-items-section,
+.cart-summary,
+.empty-cart {
+  background: #ffffff;
+  border: 1px solid #e3e7ee;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(30, 40, 60, 0.05);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 0;
+}
+
+.section-heading p {
+  margin: 5px 0 0;
+  color: #697386;
+}
+
+.scan-more-button,
+.scan-button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: #172033;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid #e6e9ef;
+  border-radius: 14px;
+}
+
+.item-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  border-radius: 12px;
+  font-size: 28px;
+}
+
+.item-info h3 {
+  margin: 0 0 6px;
+}
+
+.item-info p {
+  margin: 3px 0;
+  color: #697386;
+  font-size: 13px;
+}
+
+.verified-label {
+  display: inline-block;
+  margin-top: 7px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: #ecfdf3;
+  color: #047857;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.item-price {
+  text-align: right;
+}
+
+.item-price strong {
+  display: block;
+  font-size: 18px;
+}
+
+.item-price span {
+  font-size: 12px;
+  color: #7b8494;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dce1e8;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.quantity-control button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f8fafc;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.quantity-control span {
+  width: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.remove-button {
+  border: none;
+  background: transparent;
+  color: #dc2626;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cart-summary h2 {
+  margin-top: 0;
+}
+
+.summary-row,
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.summary-row span {
+  color: #697386;
+}
+
+.summary-divider {
+  height: 1px;
+  background: #e6e9ef;
+  margin: 10px 0;
+}
+
+.total-row {
+  font-size: 21px;
+}
+
+.checkout-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 60px 25px;
+}
+
+.empty-cart-icon {
+  font-size: 60px;
+}
+
+.empty-cart h2 {
+  margin: 15px 0 8px;
+}
+
+.empty-cart p {
+  max-width: 500px;
+  margin: 0 auto 22px;
+  color: #697386;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .cart-header {
+    padding: 18px;
+  }
+
+  .cart-content {
+    width: min(100% - 20px, 1000px);
+    margin: 20px auto;
+  }
+
+  .cart-items-section,
+  .cart-summary,
+  .empty-cart {
+    padding: 16px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cart-item {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .item-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .item-price,
+  .quantity-control,
+  .remove-button {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .item-price {
+    text-align: left;
+  }
+}
