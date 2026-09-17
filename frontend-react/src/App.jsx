@@ -1,44 +1,89 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
 import Login from "./pages/Login";
+import CustomerLogin from "./pages/CustomerLogin";
+import RetailerLogin from "./pages/RetailerLogin";
 
-function CustomerHome() {
-    return (
-        <div style={{ padding: "40px", fontFamily: "Arial" }}>
-            <h1>SmartCart Customer Home</h1>
-            <p>Customer page will be built next.</p>
-        </div>
-    );
-}
-
-function RetailerHome() {
-    return (
-        <div style={{ padding: "40px", fontFamily: "Arial" }}>
-            <h1>SmartCart Retailer Dashboard</h1>
-            <p>Retailer page will be built later.</p>
-        </div>
-    );
-}
+import CustomerHome from "./pages/CustomerHome";
+import Scanner from "./pages/Scanner";
+import ShoppingList from "./pages/ShoppingList";
+import VerifyWeight from "./pages/VerifyWeight";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import Payment from "./pages/Payment";
+import Bill from "./pages/Bill";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
+  return (
+    <BrowserRouter>
+      <Routes>
 
-                <Route path="/" element={<Login />} />
+        {/* Main Role Selection */}
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
 
-                <Route
-                    path="/customer"
-                    element={<CustomerHome />}
-                />
+        {/* Customer Login */}
+        <Route
+          path="/customer-login"
+          element={<CustomerLogin />}
+        />
 
-                <Route
-                    path="/retailer"
-                    element={<RetailerHome />}
-                />
+        {/* Retailer Login */}
+        <Route
+          path="/retailer-login"
+          element={<RetailerLogin />}
+        />
 
-            </Routes>
-        </BrowserRouter>
-    );
+        {/* Customer Pages */}
+        <Route
+          path="/customer"
+          element={<CustomerHome />}
+        />
+
+        <Route
+          path="/scanner"
+          element={<Scanner />}
+        />
+
+        <Route
+          path="/verify-weight"
+          element={<VerifyWeight />}
+        />
+
+        <Route
+          path="/shopping-list"
+          element={<ShoppingList />}
+        />
+
+        <Route
+          path="/cart"
+          element={<Cart />}
+        />
+
+        <Route
+          path="/checkout"
+          element={<Checkout />}
+        />
+
+        <Route
+          path="/payment"
+          element={<Payment />}
+        />
+
+        <Route
+          path="/bill"
+          element={<Bill />}
+        />
+
+        {/* Unknown URL */}
+        <Route
+          path="*"
+          element={<Navigate to="/" replace />}
+        />
+
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
