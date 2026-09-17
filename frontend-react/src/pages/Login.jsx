@@ -6,14 +6,11 @@ function Login() {
 
   return (
     <div className="login-page">
-
       <div className="login-background-shape login-shape-one"></div>
       <div className="login-background-shape login-shape-two"></div>
 
       <main className="login-container">
-
         <section className="login-brand-section">
-
           <div className="brand-badge">
             <span>🛒</span>
             SmartCart
@@ -46,25 +43,16 @@ function Login() {
               <p>Easy Checkout</p>
             </div>
           </div>
-
         </section>
 
         <section className="login-card">
-
           <div className="login-card-header">
-
-            <div className="login-icon">
-              🛒
-            </div>
+            <div className="login-icon">🛒</div>
 
             <div>
-              <p className="welcome-label">
-                WELCOME TO SMARTCART
-              </p>
-
+              <p className="welcome-label">WELCOME TO SMARTCART</p>
               <h2>Choose your account</h2>
             </div>
-
           </div>
 
           <p className="login-description">
@@ -72,46 +60,32 @@ function Login() {
           </p>
 
           <div className="role-options">
-
             <button
               className="role-card customer-role"
               onClick={() => navigate("/customer-login")}
             >
-
-              <div className="role-icon">
-                👤
-              </div>
+              <div className="role-icon">👤</div>
 
               <div className="role-text">
-                <span className="role-title">
-                  Customer
-                </span>
+                <span className="role-title">Customer</span>
 
                 <span className="role-description">
-                  Scan products, verify your items and
+                  Scan products, verify your purchases and
                   checkout quickly.
                 </span>
               </div>
 
-              <span className="role-arrow">
-                →
-              </span>
-
+              <span className="role-arrow">→</span>
             </button>
 
             <button
               className="role-card retailer-role"
               onClick={() => navigate("/retailer-login")}
             >
-
-              <div className="role-icon">
-                🏪
-              </div>
+              <div className="role-icon">🏪</div>
 
               <div className="role-text">
-                <span className="role-title">
-                  Retailer
-                </span>
+                <span className="role-title">Retailer</span>
 
                 <span className="role-description">
                   Manage products, inventory, sales and
@@ -119,27 +93,16 @@ function Login() {
                 </span>
               </div>
 
-              <span className="role-arrow">
-                →
-              </span>
-
+              <span className="role-arrow">→</span>
             </button>
-
           </div>
 
           <div className="login-security">
             <span>🔒</span>
             Secure shopping experience
           </div>
-
         </section>
-
       </main>
-
-      <footer className="login-footer">
-        SMART SHOPPING CART • COLLEGE PROJECT PROTOTYPE
-      </footer>
-
     </div>
   );
 }
